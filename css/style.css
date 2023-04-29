@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap');
+
+body {
+    margin: 0px;
+    font-family: 'Sura';
+    font-style: normal;
+    display: grid;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 5px 25px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 63px;
+}
+
+.sep {
+    border: .5px solid #CECECE;
+    margin-bottom: 100px;
+}
+
+.outer {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex: 1;
+}
+
+.letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #9D9D9D;
+}
