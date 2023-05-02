@@ -59,13 +59,13 @@ async function checkWord() {
     loadingDiv.classList.remove('show')
     if (result.validWord) {
         if (word === dailyWord) {
-            alert("M9WED KHOUYA") ///////////// add play again button + change the dialogue
+            alert("YOU WON!\nPLAY AGAIN")
             gameOver = true
         }
         colorLetters(idx - 1, Letter)
         word = ""
         if (++attempts == attempsLimit && gameOver == false) {
-            alert(dailyWord + " al7mar") ///////////// add play again button + change the dialogue
+            alert("The word was: " + dailyWord + "\nPLAY AGAIN")
             wordComplete = false
             gameOver = true
         }
