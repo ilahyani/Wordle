@@ -71,8 +71,15 @@ async function checkWord() {
         }
         wordComplete = false
     }
-    else
-        alert("Not in word list. Try again")
+    else {
+        let pos = idx - 5
+        for (let pos = idx - 5; pos < idx; pos++) {
+            Letter[pos].classList.remove('invalid')
+            setTimeout(function() {
+                Letter[pos].classList.add('invalid')
+            }, 10)
+        }
+    }
 }
 
 function isLetter(letter) {

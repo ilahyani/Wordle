@@ -24,7 +24,7 @@ header {
     margin-bottom: 50px;
 }
 
-/* Loading Animation */
+/* wrong input Animation */
 .invalid {
     animation: flash 1s;
 }
@@ -39,6 +39,7 @@ header {
     }
 }
 
+/* Loading Animation */
 .spiral {
     font-size: 40px;
     animation: spin 1.5s linear infinite;
