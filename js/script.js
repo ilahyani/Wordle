@@ -7,7 +7,6 @@ const Letter = document.querySelectorAll(".letter")
 const attempsLimit = 6, wordLength = 5
 
 getDailyWord()
-loadingDiv.classList.add('hidden')
 document.addEventListener('keydown', function (event) {
     if (!gameOver) {
         if (wordComplete) {
@@ -51,14 +50,13 @@ async function getDailyWord() {
 }
 
 async function checkWord() {
-    loadingDiv.classList.remove('hidden')
+    loadingDiv.classList.add('show')
     let response = await fetch(validatewordAPI, {
         method: 'POST',
         body: JSON.stringify({ word: word })
     })
     let result = await response.json() // {"word": "crane", "validWord": true}
-    loadingDiv.classList.add('hidden')
-    //loadingDiv
+    loadingDiv.classList.remove('show')
     if (result.validWord) {
         if (word === dailyWord) {
             alert("M9WED KHOUYA") ///////////// add play again button + change the dialogue
