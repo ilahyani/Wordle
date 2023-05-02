@@ -1,12 +1,14 @@
 # Wordle Remake
 
-This is a remake of the popular Wordle game website built using HTML, CSS, and JavaScript.
+This is a remake of the popular Wordle game but you get a new word everytime you refresh the page.
+It's built using HTML, CSS, and vanilla JavaScript.
 
 ## Usage
 To play the game, clone the repository and open the index.html in your browser:
 
 Enter your guess in the input field.
 Repeat  until you either guess the word or run out of attempts.
+Refresh the page to play again.
 If you want to modify or extend the game, clone the repository and use any code editor to open the project files.
 
 ## Credits
