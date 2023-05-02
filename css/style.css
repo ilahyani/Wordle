@@ -21,13 +21,51 @@ header {
 
 .sep {
     border: .5px solid #CECECE;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
+
+/* Loading Animation */
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+    
+    100% {
+        border-color: #ccc;
+    }
+}
+
+.spiral {
+    font-size: 40px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.info-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* -------------------------------- */
 
 .outer {
     display: inline-flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .row {
