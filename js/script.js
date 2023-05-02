@@ -85,20 +85,21 @@ function colorLetters(idx) {
     let tmpWord = word
     for (let i = 0; i < wordLength; i++) {
         Letter[pos].style.color = 'white'
+        Letter[pos].style.backgroundColor = letterDoesntExist
         if (tmpDailyWord.indexOf(tmpWord[i]) !== -1) {
             if (tmpDailyWord[i] === tmpWord[i])
                 Letter[pos].style.backgroundColor = letterMatch
-            else {
-                if (tmpWord.toString().substring(0, i).indexOf(tmpWord[i]) === -1)
-                    Letter[pos].style.backgroundColor = letterDoesntMatch
-                else
-                    Letter[pos].style.backgroundColor = letterDoesntExist
-            }
-            tmpDailyWord = tmpDailyWord.toString().replace(tmpWord[i], '.')
-            tmpWord = tmpWord.toString().replace(tmpWord[i], '.')
+            else
+                checkDuplicateLetters(tmpWord, tmpDailyWord, pos, i)
         }
-        else
-            Letter[pos].style.backgroundColor = letterDoesntExist
         pos++
+    }
+}
+
+function checkDuplicateLetters(tmpWord, tmpDailyWord, pos, i) {
+    if (tmpWord.substring(0, i).indexOf(tmpWord[i]) === -1 && tmpWord.substring(i + 1, tmpWord.length).indexOf(tmpWord[i]) === -1) {
+        Letter[pos].style.backgroundColor = letterDoesntMatch
+        tmpDailyWord = tmpDailyWord.toString().replace(tmpWord[i], '.')
+        tmpWord = tmpWord.toString().replace(tmpWord[i], '.')
     }
 }
