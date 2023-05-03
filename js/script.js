@@ -61,6 +61,7 @@ async function checkWord() {
         if (word === dailyWord) {
             alert("YOU WON!\nPLAY AGAIN")
             gameOver = true
+            location.reload(true)
         }
         colorLetters(idx - 1, Letter)
         word = ""
@@ -68,6 +69,7 @@ async function checkWord() {
             alert("The word was: " + dailyWord + "\nPLAY AGAIN")
             wordComplete = false
             gameOver = true
+            location.reload(true)
         }
         wordComplete = false
     }
