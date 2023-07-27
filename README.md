@@ -3,6 +3,10 @@
 This is a remake of the popular Wordle game but you get a new word everytime.
 It's built using HTML, CSS, and JavaScript.
 
+## Screenshots
+  <img src="https://github.com/ilahyani/Wordle/blob/main/Screenshots/Screenshot1.jpg" width="100%" />
+  <img src="https://github.com/ilahyani/Wordle/blob/main/Screenshots/Screenshot2.jpg" width="100%" />
+
 ## Usage
 To play the game, clone the repository and open the index.html in your browser:
 
